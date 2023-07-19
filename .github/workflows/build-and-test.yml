@@ -1,46 +1,6 @@
 name: "build and test"
 on:
- push:
-    branches:
-      - dev
-    paths:
-      - 'framework/**/*.cs'
-      - 'framework/**/*.cshtml'
-      - 'framework/**/*.csproj'
-      - 'framework/**/*.razor'
-      - 'modules/**/*.cs'
-      - 'modules/**/*.cshtml'
-      - 'modules/**/*.csproj'
-      - 'modules/**/*.razor'
-      - 'templates/**/*.cs'
-      - 'templates/**/*.cshtml'
-      - 'templates/**/*.csproj'
-      - 'templates/**/*.razor'
-      - 'Directory.Build.props'
-
-  pull_request:
-    paths:
-      - 'framework/**/*.cs'
-      - 'framework/**/*.cshtml'
-      - 'framework/**/*.csproj'
-      - 'framework/**/*.razor'
-      - 'modules/**/*.cs'
-      - 'modules/**/*.cshtml'
-      - 'modules/**/*.csproj'
-      - 'modules/**/*.razor'
-      - 'templates/**/*.cs'
-      - 'templates/**/*.cshtml'
-      - 'templates/**/*.csproj'
-      - 'templates/**/*.razor'
-      - 'Directory.Build.props'
-    types:
-      - opened
-      - synchronize
-      - reopened
-      - ready_for_review
-permissions:
-  contents: read
-
+ workflow_dispatch:
 jobs:
   build-test:
     runs-on: ubuntu-latest
