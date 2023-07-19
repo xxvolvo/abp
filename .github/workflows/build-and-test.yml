@@ -1,6 +1,6 @@
 name: "build and test"
 on:
-  push:
+workflow_dispatch:
     branches:
       - dev
     paths:
